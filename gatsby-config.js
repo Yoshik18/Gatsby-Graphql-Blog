@@ -15,6 +15,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "digbiz.local",
+        protocol: "http",
+        hostingWPCOM: false,
+      },
+    },
   ],
   siteMetadata: {
     title: "Gatsby Project",

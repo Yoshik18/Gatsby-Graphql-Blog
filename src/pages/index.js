@@ -6,12 +6,12 @@ import Post from "../components/Post"
 const index = ({ data }) => {
   return (
     <PrimaryLayout>
-      {data.allMarkdownRemark.nodes.map(node => (
+      {data.allWordpressPost.nodes.map(node => (
         <Post
-          image={node.frontmatter.image}
-          title={node.frontmatter.title}
+          image={node.featured_media.source_url}
+          title={node.title}
           excerpt={node.excerpt}
-          readMore={node.fields.slug}
+          readMore={node.slug}
         />
       ))}
     </PrimaryLayout>
@@ -20,19 +20,14 @@ const index = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allWordpressPost {
       nodes {
-        frontmatter {
-          title
-          date
-          keywords
-          image
+        slug
+        title
+        featured_media {
+          source_url
         }
         excerpt
-        html
-        fields {
-          slug
-        }
       }
     }
   }

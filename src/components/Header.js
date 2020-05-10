@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const header = props => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar fixed="top" className="myNav" bg="light" expand="lg">
       <Navbar.Brand href="/">{props.title}</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
