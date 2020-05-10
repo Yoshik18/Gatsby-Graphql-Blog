@@ -18,13 +18,22 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "digbiz.local",
+        baseUrl: "url",
         protocol: "http",
         hostingWPCOM: false,
       },
+      includedRoutes: [
+        "**/categories",
+        "**/posts",
+        "**/pages",
+        "**/media",
+        "**/tags",
+        "**/taxonomies",
+        "**/users",
+      ],
     },
   ],
   siteMetadata: {
-    title: "Gatsby Project",
+    title: "Blog",
   },
 }

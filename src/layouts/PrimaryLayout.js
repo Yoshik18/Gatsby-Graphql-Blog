@@ -7,16 +7,11 @@ const PrimaryLayout = props => {
     <div>
       <Header></Header>
       <div className="container">
-        <div className="row justify-content-md-center">
-          <div className={props.class}>{props.children}</div>
-        </div>
+        <div className="row">{props.children}</div>
       </div>
       <Footer></Footer>
     </div>
   )
-}
-PrimaryLayout.defaultProps = {
-  class: "col-xs-6",
 }
 
 export default PrimaryLayout

@@ -7,12 +7,19 @@ const index = ({ data }) => {
   return (
     <PrimaryLayout>
       {data.allWordpressPost.nodes.map(node => (
-        <Post
-          image={node.featured_media.source_url}
-          title={node.title}
-          excerpt={node.excerpt}
-          readMore={node.slug}
-        />
+        <div className="col-md-4">
+          {node.categories.name}
+          <Post
+            title={node.title}
+            excerpt={node.excerpt}
+            image={
+              node.featured_media.source_url == null
+                ? ""
+                : node.featured_media.source_url
+            }
+            category={node.categories[0].name}
+          />
+        </div>
       ))}
     </PrimaryLayout>
   )
@@ -22,12 +29,15 @@ export const query = graphql`
   {
     allWordpressPost {
       nodes {
-        slug
+        date
         title
+        excerpt
         featured_media {
           source_url
         }
-        excerpt
+        categories {
+          name
+        }
       }
     }
   }
