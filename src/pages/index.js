@@ -33,7 +33,7 @@ const index = ({ data }) => {
 
 export const query = graphql`
   {
-    allWordpressPost {
+    allWordpressPost(sort: { fields: id, order: ASC }) {
       nodes {
         slug
         date(formatString: "Do MMM ")
