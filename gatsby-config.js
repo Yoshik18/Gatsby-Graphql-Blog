@@ -18,19 +18,10 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "url",
+        baseUrl: "blog.com",
         protocol: "http",
         hostingWPCOM: false,
       },
-      includedRoutes: [
-        "**/categories",
-        "**/posts",
-        "**/pages",
-        "**/media",
-        "**/tags",
-        "**/taxonomies",
-        "**/users",
-      ],
     },
   ],
   siteMetadata: {

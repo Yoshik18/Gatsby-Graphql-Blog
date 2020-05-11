@@ -10,8 +10,13 @@ const index = ({ data }) => {
         <div className="col-md-4">
           {node.categories.name}
           <Post
+            slug={node.slug}
             title={node.title}
-            excerpt={node.excerpt}
+            excerpt={
+              node.excerpt.length > 100
+                ? node.excerpt.substr(0, 100) + "..."
+                : node.excerpt
+            }
             image={
               node.featured_media.source_url == null
                 ? ""
@@ -29,6 +34,7 @@ export const query = graphql`
   {
     allWordpressPost {
       nodes {
+        slug
         date
         title
         excerpt

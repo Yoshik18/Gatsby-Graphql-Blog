@@ -6,10 +6,24 @@ body {
 }
 
 .myNav {
-  background-color: rgb(209, 209, 209) !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
 
 .card {
   outline: none;
   box-shadow: 5px 5px 5px rgb(197, 197, 197);
+  min-height: 400px;
+}
+
+.post-card {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.category {
+  position: absolute;
+  bottom: 10px;
+  left: 24px;
 }
