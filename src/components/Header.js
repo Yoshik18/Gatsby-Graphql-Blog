@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
 const header = ({ data }) => {
+  console.log(data)
   return (
     <div>
       <Navbar className="myNav p-4" bg="light" expand="lg">
@@ -23,8 +24,6 @@ const header = ({ data }) => {
   )
 }
 
-export default header
-
 export const query = graphql`
   {
     allWordpressWpApiMenusMenusItems {
@@ -37,3 +36,5 @@ export const query = graphql`
     }
   }
 `
+
+export default header
