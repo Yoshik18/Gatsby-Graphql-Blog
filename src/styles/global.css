@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 body {
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   position: relative;
   margin: 0;
@@ -13,13 +15,25 @@ body {
 .hero {
   width: 100%;
   height: 300px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .card {
   outline: none;
   box-shadow: 5px 5px 5px rgb(197, 197, 197);
   min-height: 450px;
+}
+
+.card:hover .hover-underline {
+  background-image: linear-gradient(to right, #c398ff, #c398ff);
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  background-size: 10rem 0.55rem;
+  animation-name: initiate_underline;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .post-card {
@@ -44,4 +58,25 @@ body {
   height: 60px;
   line-height: 60px;
   background-color: rgb(212, 212, 212);
+}
+
+.underline {
+  background-image: linear-gradient(to right, #6a00ff, #6a00ff);
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  background-size: 10rem 0.55rem;
+  animation-name: initiate_underline;
+  animation-delay: 0.3s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes initiate_underline {
+  0% {
+    background-size: 0% 0.55rem;
+  }
+  100% {
+    background-size: 100% 0.55rem;
+  }
 }

@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <div>
       <div className="hero mb-4 d-flex flex-column justify-content-center align-items-center text-white">
-        <h1 className="display-4">DigBizCards Blog</h1>
-        <p className="lead">Thoughts, stories and ideas.</p>
+        <h1 className="font-weight-bold underline">DigBizCards Blog</h1>
+        <p className="underline">Thoughts, stories and ideas.</p>
       </div>
     </div>
   )

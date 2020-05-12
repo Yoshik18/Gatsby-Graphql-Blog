@@ -12,11 +12,11 @@ const header = ({ data }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            {data.allWordpressWpApiMenusMenusItems.nodes.items.map(item => (
+            {/* {data.allWordpressWpApiMenusMenusItems.nodes.items.map(item => (
               <Nav.Link as={Link} to={item.slug}>
                 {item.title}
               </Nav.Link>
-            ))}
+            ))} */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
